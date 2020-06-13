@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow: 0 1px 3px rgba(197, 225, 230, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 * {
-  box-sizing: content-box;
+  box-sizing: content-box ;
 }
 
 body {
@@ -14,25 +14,24 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 .container {
   margin: 30px auto;
-  width: 350px;
+  width: 500px;
 }
 
 h1 {
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin: 0;
 }
 
 h3 {
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 10px;
-  margin: 40px 0 10px;
+  border-bottom: 1px solid rgb(115, 186, 219);
+  padding-bottom: 20px;
+  margin: 50px 0 10px;
 }
 
 h4 {
@@ -60,8 +59,8 @@ h4 {
 
 .money {
   font-size: 20px;
-  letter-spacing: 1px;
-  margin: 5px 0;
+  letter-spacing: 2px;
+  margin:15px 0;
 }
 
 .money.plus {
@@ -79,11 +78,11 @@ label {
 
 input[type='text'],
 input[type='number'] {
-  border: 1px solid #dedede;
-  border-radius: 4px;
+  border:2px dotted #dedede;
+  border-radius: 5px;
   display: block;
   font-size: 18px;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
 }
 
@@ -112,8 +111,8 @@ input[type='number'] {
 }
 
 .list li {
-  background-color: #fff;
-  box-shadow: var(--box-shadow);
+  background-color: rgb(202, 243, 240);
+  box-shadow: 20px;
   color: rgb(21, 31, 124);
   display: flex;
   justify-content: space-between;
@@ -123,7 +122,7 @@ input[type='number'] {
 }
 
 .list li.plus {
-  border: 5px solid #2ecc71;
+  border: 5px double #2ecc71;
 }
 
 .list li.minus {
@@ -132,7 +131,7 @@ input[type='number'] {
 
 .delete-btn {
   cursor: pointer;
-  background-color: #a04c68;
+  background-color: #f6427e;
   border: 0;
   color: rgb(87, 119, 155);
   font-size: 20px;
@@ -141,13 +140,13 @@ input[type='number'] {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%) ;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .list li:hover .delete-btn {
-  opacity: 1;
+  opacity: 5;
 }
 
 @media (max-width: 320px) {
