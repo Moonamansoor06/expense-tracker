@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
-
+/* This wil return every single transaction as component */
 export const Transaction = ({ transaction }) => {
   const { deleteTransaction } = useContext(GlobalContext);
 

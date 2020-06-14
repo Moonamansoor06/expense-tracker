@@ -1,6 +1,11 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
-
+/* this will add delete and modify transactions it wil use a hook 
+useState which will take current state and a function to set the new state
+here it will be called fro both text and amount to update text and amount values
+we are using the hook bcoz we have user input which is going to modify  the content
+initial state for text is empty staring here and the amount is 0
+ */
 export const AddTransaction = () => {
   const [text, setText] = useState('');
   const [amount, setAmount] = useState(0);
@@ -18,7 +23,9 @@ export const AddTransaction = () => {
 
     addTransaction(newTransaction);
   }
-
+/*input valuewill be the text entered and in case of amount the number entered and on change we will call a function with an event as paramenter
+which will call  setText and setAmount funtions which are declared in the code above
+ */
   return (
     <>
       <h3>Add new transaction</h3>

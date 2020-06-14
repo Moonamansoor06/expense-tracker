@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
-
+/*Balance component  will take values from global provider
+and calculate the total and apply reduce to keep it limited to required decimal values
+*/
 export const Balance = () => {
   const { transactions } = useContext(GlobalContext);
 

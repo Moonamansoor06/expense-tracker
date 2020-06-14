@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
-
+/* Income expences Component */
 export const IncomeExpenses = () => {
   const { transactions } = useContext(GlobalContext);
-
+/**
+ declare variable amount and do calculations over the state of transactions amount 
+and save in the variable and return income and expense funtions
+ */
   const amounts = transactions.map(transaction => transaction.amount);
 
   const income = amounts

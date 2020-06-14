@@ -7,3 +7,5 @@ export const Header = () => {
     </h2>
   )
 }
+/* simplest of all this will return a heading only
+and exported to be rendered in Ap.js as a component*/
