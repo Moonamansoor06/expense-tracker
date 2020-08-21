@@ -27,15 +27,17 @@
     <title>React App</title>
   </head>
   <body>
-   <!--  <script>
-      /* Service worker for Firebase Cloud Messaging */
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('firebase-messaging-sw.js')
-          .then(service => console.log('service worker installed :', service))
-          .catch(err => console.error('Error', err));
-      }
-    </script> -->
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+  <script type=text/javascript>
+    if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then((reg) => console.log('Success: ', reg.scope))
+            .catch((err) => console.log('Failure: ', err));
+    })
+}
+
+    </script>  
+   
     <div id="root"></div>
     <!--
       This HTML file is a template.

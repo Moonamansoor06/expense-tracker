@@ -1,22 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import swDev from './swDev'
-/* import * as firebase from 'firebase'
+//import sw from './sw'
+import firebase from 'firebase'
 
-const firebaseConfig = {
-  apiKey: "AIzaSyA27YmUndvNM0Vet3POFCtBNlH-PwAG-gc",
-  authDomain: "notification-app-70d62.firebaseapp.com",
-  databaseURL: "https://notification-app-70d62.firebaseio.com",
-  projectId: "notification-app-70d62",
-  storageBucket: "notification-app-70d62.appspot.com",
-  messagingSenderId: "673190115330",
-  appId: "1:673190115330:web:8a09446abef9e81019cf1b"
-};
+// import  firebase from './firebase'
+import * as serviceWorker from './serviceWorker';
 
-firebase.initializeApp(require(firebaseConfig));
- */
+//firebase.initializeApp();
+ 
 //import * as serviceWorker from './serviceWorker';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -24,5 +18,13 @@ ReactDOM.render(
   document.getElementById('root')
 
 );
-swDev();
-//serviceWorker.unregister(); /* change from unregister to register */
+//sw();
+serviceWorker.register(); /* change from unregister to register */
+firebase.initializeApp({ apiKey: "AIzaSyCxrQDQtymKVyw2xKsn2T1XE78fRCJj4LE",
+authDomain: "expense-tracker-e1e77.firebaseapp.com",
+databaseURL: "https://expense-tracker-e1e77.firebaseio.com",
+projectId: "expense-tracker-e1e77",
+storageBucket: "expense-tracker-e1e77.appspot.com",
+messagingSenderId: "613575190808",
+appId: "1:613575190808:web:7df0a69c85fd370377166d",
+measurementId: "G-3YX0LK5E8F"})

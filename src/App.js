@@ -6,14 +6,13 @@ import { TransactionList } from './components/TransactionList';
 import { AddTransaction } from './components/AddTransaction';
 
 import { GlobalProvider } from './context/GlobalState';
-
+import {askForPermissionToReceiveNotifications} from "./push-notification"
 import './App.css';
 //import {initNotification} from "./services/firebaseService"
-import firebase from './firebase'
-import { messaging } from 'firebase';
+//import firebase from 'firebase';
 
 function App() {
-  React.useEffect(() => {
+/*   React.useEffect(() => {
     const msg=firebase.messaging();
     msg.requestPermission().then(() => {
         
@@ -24,12 +23,28 @@ function App() {
            .catch((err) => {
                console.log("An error occurred while retrieving token. ", err);
            })
-          })
+          }) */
     /*   messaging.onMessage(function(payload){
         console.log("on message", payload);
       })
         */
-  
+       /* if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then(function(reg) {
+      
+          if(reg.installing) {
+            console.log('Service worker installing');
+          } else if(reg.waiting) {
+            console.log('Service worker installed');
+          } else if(reg.active) {
+            console.log('Service worker active');
+          }
+      
+        }).catch(function(error) {
+          // registration failed
+          console.log('Registration failed with ' + error);
+        });
+      } */
+        askForPermissionToReceiveNotifications();
   return (
     <GlobalProvider>
       <Header />
