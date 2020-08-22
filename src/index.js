@@ -5,7 +5,7 @@ import App from './App';
 //import firebase from 'firebase'
 
 // import  firebase from './firebase'
-import * as serviceWorker from './serviceWorker';
+//import * as serviceWorker from './serviceWorker';
 import { registerServiceWorker } from './sw'
 
 //firebase.initializeApp();
@@ -21,7 +21,7 @@ ReactDOM.render(
 );
 //sw();
 registerServiceWorker()
-serviceWorker.register(); /* change from unregister to register */
+//serviceWorker.register(); /* change from unregister to register */
 /* firebase.initializeApp({ apiKey: "AIzaSyCxrQDQtymKVyw2xKsn2T1XE78fRCJj4LE",
 authDomain: "expense-tracker-e1e77.firebaseapp.com",
 databaseURL: "https://expense-tracker-e1e77.firebaseio.com",

@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :root {
-  --box-shadow: 0 1px 3px rgba(197, 225, 230, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow: 0 1px 3px rgba(197, 225, 230, 0.12), 0 1px 2px rgba(168, 200, 221, 0.24);
+  justify-content: center;
 }
 
 * {
   box-sizing: content-box ;
+  justify-content: center;
 }
 
 body {
@@ -40,7 +42,7 @@ h4 {
 }
 
 .inc-exp-container {
-  background-color: rgb(194, 192, 229);
+  background-color: rgb(142, 140, 185);
   box-shadow: 5px;
   padding: 20px;
   display: flex;
@@ -149,8 +151,12 @@ input[type='number'] {
   opacity: 5;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 300px) {
   .container {
     width: 300px;
   }
+}
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
 }

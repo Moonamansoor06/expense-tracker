@@ -1,5 +1,19 @@
 const CACHE_NAME = "version-1";
-const urlsToCache = [ '/src/'
+const urlsToCache = [ '/static/js/bundle.js',
+'/static/js/main.chunk.js',
+'static/js/0.chunk.js',
+'index.html',
+'/components/AddTransactions.js',
+'/components/Balance.js',
+'/components/Header.js',
+'/components/IncomeExpense.js',
+'/components/Transaction.js',
+'/components/TransactionList.js',
+'/context/AppReducer.js',
+'/context/GlobalState.js',
+'/App.js',
+'/index.js'
+
 ];
 const self=this;
 
