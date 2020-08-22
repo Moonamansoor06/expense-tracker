@@ -6,12 +6,24 @@ import { TransactionList } from './components/TransactionList';
 import { AddTransaction } from './components/AddTransaction';
 
 import { GlobalProvider } from './context/GlobalState';
-import {askForPermissionToReceiveNotifications} from "./push-notification"
+//import {askForPermissionToReceiveNotifications} from "./push-notification"
 import './App.css';
 //import {initNotification} from "./services/firebaseService"
 //import firebase from 'firebase';
 
+import { requestFirebaseNotificationPermission } from './firebaseInit'
+
+
 function App() {
+  requestFirebaseNotificationPermission()
+  .then((firebaseToken) => {
+    // eslint-disable-next-line no-console
+    console.log("token===>",firebaseToken);
+  })
+  .catch((err) => {
+    return err;
+  });
+  
 /*   React.useEffect(() => {
     const msg=firebase.messaging();
     msg.requestPermission().then(() => {
@@ -44,7 +56,7 @@ function App() {
           console.log('Registration failed with ' + error);
         });
       } */
-        askForPermissionToReceiveNotifications();
+      //  askForPermissionToReceiveNotifications();
   return (
     <GlobalProvider>
       <Header />
